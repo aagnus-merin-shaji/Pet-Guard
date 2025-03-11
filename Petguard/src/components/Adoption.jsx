@@ -17,12 +17,15 @@ const Adoption = () => {
       
       {/* Hero Section */}
       <section className="bg-blue-600 text-white py-16 text-center mt-16">
-        <h1 className="text-4xl font-bold">Find Your New Best Friend</h1>
-        <p className="mt-2 text-lg">Adopt a pet and give them a loving home.</p>
-        <button className="mt-4 px-6 py-2 bg-white text-blue-600 font-semibold rounded-lg shadow-md hover:bg-gray-200">
-          Browse Pets
-        </button>
-      </section>
+  <h1 className="text-4xl font-bold">Find Your New Best Friend</h1>
+  <p className="mt-2 text-lg">Adopt a pet and give them a loving home.</p>
+  <a href="/profile">
+    <button className="mt-4 px-6 py-2 bg-white text-blue-600 font-semibold rounded-lg shadow-md hover:bg-gray-200">
+      Browse Pets
+    </button>
+  </a>
+</section>
+
 
       {/* About Section */}
       <section id="about" className="py-16 bg-white text-center px-6">
@@ -37,17 +40,17 @@ const Adoption = () => {
         <h2 className="text-3xl font-bold text-gray-800">Meet Our Pets</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 mt-6">
           <div className="bg-white p-4 shadow-md rounded-lg">
-            <img src="https://via.placeholder.com/150" alt="Pet 1" className="w-full h-48 object-cover rounded-lg" />
+            <img src="public/bella.jpeg" alt="Pet 1" className="w-full h-48 object-cover rounded-lg" />
             <h3 className="text-xl font-semibold mt-2">Bella</h3>
             <p className="text-gray-600">Friendly and playful dog looking for a home.</p>
           </div>
           <div className="bg-white p-4 shadow-md rounded-lg">
-            <img src="https://via.placeholder.com/150" alt="Pet 2" className="w-full h-48 object-cover rounded-lg" />
+            <img src="public/whisker.jpeg" alt="Pet 2" className="w-full h-48 object-cover rounded-lg" />
             <h3 className="text-xl font-semibold mt-2">Whiskers</h3>
             <p className="text-gray-600">A curious and loving cat waiting for a family.</p>
           </div>
           <div className="bg-white p-4 shadow-md rounded-lg">
-            <img src="https://via.placeholder.com/150" alt="Pet 3" className="w-full h-48 object-cover rounded-lg" />
+            <img src="public/mmm.jpg" alt="Pet 3" className="w-full h-30 object-cover rounded-lg" />
             <h3 className="text-xl font-semibold mt-2">Max</h3>
             <p className="text-gray-600">Energetic and affectionate pup seeking a loving home.</p>
           </div>

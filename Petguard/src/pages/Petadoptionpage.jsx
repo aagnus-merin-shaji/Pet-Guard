@@ -5,7 +5,6 @@ import Pet from '../components/Pet'
 function Petadoptionpage() {
   return (
     <>
-    <Navbar/>
     <Pet/>
     </>
   )

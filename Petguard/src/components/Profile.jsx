@@ -78,7 +78,9 @@ const Profile = () => {
                         >
                             {expandedId === pet.id ? "Read Less" : "Read More"}
                         </button>
-                        <button className="mt-2 w-full bg-green-500 text-white py-2 px-4 rounded">Adopt</button>
+                        <a href="/adoptionform">
+  <button className="mt-2 w-full bg-green-500 text-white py-2 px-4 rounded">Adopt</button>
+</a>
                     </div>
                 </div>
             ))}

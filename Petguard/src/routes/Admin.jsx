@@ -25,7 +25,7 @@ function Admin() {
     <Route path='/login' element={<Loginpage/>}/>
     <Route path='/signup' element={<Signuppage/>}/>
     <Route path='/contact' element={<Contactpage/>}/>
-    <Route path='/pet' element={<Petadoptionpage/>}/>
+    <Route path='/adoptionform' element={<Petadoptionpage/>}/>
     <Route path='/petshelter' element={<Petshelterpage/>}/>
     <Route path='/' element={<Admindashbaordpage/>}/>
     <Route path='/profile' element={<Profilepage/>}/>
