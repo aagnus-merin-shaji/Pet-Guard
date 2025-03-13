@@ -50,37 +50,44 @@ const Profile = () => {
             size: "Large",
             adoptionFee: "$180",
             image: "public/patti.jpg",
-            status: "UnAvailable"
-        }
+            status: "Unavailable"
+        },
     ];
 
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-6">
             {pets.map((pet) => (
-                <div key={pet.id} className="shadow-lg rounded-2xl overflow-hidden bg-white">
-                    <div className="p-4">
-                        <h2 className="text-2xl font-semibold">{pet.name}</h2>
-                        <p className="text-gray-600">Breed: {pet.breed}</p>
-                        <p className="text-gray-600">Age: {pet.age}</p>
-                        <p className={pet.vaccinated ? "text-green-600" : "text-red-600"}>
-                            {pet.vaccinated ? "Vaccinated ✅" : "Not Vaccinated ❌"}
-                        </p>
-                        <p className="text-gray-600">Size: {pet.size}</p>
-                        <p className="text-gray-600">Adoption Fee: {pet.adoptionFee}</p>
-                    </div>
-                    <img src={pet.image} alt={pet.name} className="w-full h-60 object-cover" />
-                    <div className="p-4">
-                        <p className="text-gray-600">Status: {pet.status}</p>
-                        {expandedId === pet.id && <p className="mt-2 text-gray-700">More information about {pet.name}...</p>}
-                        <button 
-                            className="mt-3 w-full bg-blue-500 text-white py-2 px-4 rounded"
-                            onClick={() => toggleReadMore(pet.id)}
-                        >
-                            {expandedId === pet.id ? "Read Less" : "Read More"}
-                        </button>
-                        <a href="/adoptionform">
-  <button className="mt-2 w-full bg-green-500 text-white py-2 px-4 rounded">Adopt</button>
-</a>
+                <div 
+                    key={pet.id} 
+                    className="shadow-lg rounded-2xl overflow-hidden bg-white transition-transform hover:scale-105"
+                >
+                    <div>
+                        <img src={pet.image} alt={pet.name} className="w-full h-64 object-cover rounded-t-2xl" />
+                        <div className="p-6">
+                            <h2 className="text-2xl font-bold text-gray-800">{pet.name}</h2>
+                            <p className="text-gray-600">Breed: {pet.breed}</p>
+                            <p className="text-gray-600">Age: {pet.age}</p>
+                            <p className={pet.vaccinated ? "text-green-600" : "text-red-600"}>
+                                {pet.vaccinated ? "Vaccinated ✅" : "Not Vaccinated ❌"}
+                            </p>
+                            <p className="text-gray-600">Size: {pet.size}</p>
+                            <p className="text-gray-600 font-semibold">Adoption Fee: {pet.adoptionFee}</p>
+                            <p className={`mt-2 font-bold ${pet.status === "Available" ? "text-green-500" : "text-red-500"}`}>Status: {pet.status}</p>
+                            {expandedId === pet.id && <p className="mt-2 text-gray-700">More information about {pet.name}...</p>}
+                            <div className="flex flex-col gap-3 mt-4">
+                                <button 
+                                    onClick={() => toggleReadMore(pet.id)}
+                                    className="w-full py-2 px-4 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-100"
+                                >
+                                    {expandedId === pet.id ? "Read Less" : "Read More"}
+                                </button>
+                                <a href="/adoptionform">
+                                    <button className="w-full py-2 px-4 bg-green-500 text-white rounded-lg hover:bg-green-600">
+                                        Adopt
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             ))}

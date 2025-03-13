@@ -1,7 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from '../pages/Home'
-import Aboutpage from '../pages/Aboutpage'
 import Loginpage from '../pages/Loginpage'
 import Signuppage from '../pages/Signuppage'
 import Contactpage from '../pages/Contactpage'
@@ -21,7 +20,6 @@ function Admin() {
   return (
     <Routes>
     <Route path='/home' element={<Home/>}/>
-    <Route path='/about' element={<Aboutpage/>}/>
     <Route path='/login' element={<Loginpage/>}/>
     <Route path='/signup' element={<Signuppage/>}/>
     <Route path='/contact' element={<Contactpage/>}/>
@@ -36,7 +34,6 @@ function Admin() {
     <Route path='/clinic' element={<Clinicpage/>}/>
     <Route path='/services' element={<Servicespage/>}/>
     <Route path='/clinicabout' element={<Clinicaboutpage/>}/>
-    <Route path='/registration' element={<Adoptionhome/>}/>
 
 </Routes>
   )

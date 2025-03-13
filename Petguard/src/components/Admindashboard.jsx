@@ -5,11 +5,11 @@ const AdminDashboard = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
 
   const dashboardStats = [
-    { title: "Registered Pets", count: 350, icon: "🐾" },
-    { title: "Lost Pet Alerts", count: 45, icon: "🔔" },
-    { title: "Adoption Requests", count: 120, icon: "🏡" },
-    { title: "Emergency Reports", count: 28, icon: "⚠️" },
-    { title: "Total Users", count: 980, icon: "👥" },
+    { title: "Registered Pets",  icon: "🐾" },
+    { title: "Lost Pet Alerts", icon: "🔔" },
+    { title: "Adoption Requests",  icon: "🏡" },
+    { title: "Emergency Reports",  icon: "⚠️" },
+    { title: "Total Users",  icon: "👥" },
     { title: "Monthly Analytics", count: "View Report", icon: "📊" },
   ];
 
@@ -19,9 +19,6 @@ const AdminDashboard = () => {
     { title: "Lost Pets", subItems: ["Reported Cases", "Found Pets"] },
     { title: "Adoptions", subItems: ["Pending Requests", "Approved Requests"] },
     { title: "Reports", subItems: ["View Reports", "Analytics"] },
-    { title: "Messages" },
-    { title: "Live Map" },
-    { title: "Settings" },
   ];
 
   return (
@@ -72,7 +69,6 @@ const AdminDashboard = () => {
         <header className="flex justify-between items-center mb-6">
           <h1 className="text-3xl font-bold uppercase"></h1>
           <div className="flex space-x-4">
-            <button className="bg-gray-300 px-4 py-2 rounded-md">🔍 Search Reports</button>
             <button className="bg-red-500 text-white px-4 py-2 rounded-md">Logout</button>
           </div>
         </header>
