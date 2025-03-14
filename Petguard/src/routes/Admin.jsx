@@ -15,6 +15,13 @@ import Communitypage from '../pages/Communitypage'
 import Clinicpage from '../pages/Clinicpage'
 import Servicespage from '../pages/Servicespage'
 import Clinicaboutpage from '../pages/Clinicaboutpage'
+import Landingpage from '../pages/Landingpage'
+import Userprofilepage from '../pages/Userprofilepage'
+import Editpage from '../pages/Editpage'
+import ShelterPage from '../pages/ShelterPage'
+import Editshelterpage from '../pages/Editshelterpage'
+import ClinicEditpage from '../pages/ClinicEditpage'
+import EditClinicpage from '../pages/EditClinicpage'
 
 function Admin() {
   return (
@@ -25,15 +32,32 @@ function Admin() {
     <Route path='/contact' element={<Contactpage/>}/>
     <Route path='/adoptionform' element={<Petadoptionpage/>}/>
     <Route path='/petshelter' element={<Petshelterpage/>}/>
-    <Route path='/' element={<Admindashbaordpage/>}/>
+    <Route path='/admin' element={<Admindashbaordpage/>}/>
     <Route path='/profile' element={<Profilepage/>}/>
     <Route path='/adoption' element={<Adoptionhome/>}/>
     <Route path='/medical' element={<Medicalpage/>}/>
     <Route path='/lostfound' element={<Lostfoundpage/>}/>
     <Route path='/community' element={<Communitypage/>}/>
+    <Route path='/' element={<Landingpage/>}/>
+    <Route path='/userprofile' element={<Userprofilepage/>}/>
+    <Route path='/editprofile' element={<Editpage/>}/>
+    <Route path='/shelterprofile' element={<ShelterPage/>}/>
+    <Route path='/editshelter' element={<Editshelterpage/>}/>
+
+    <Route path='/clinicabout' element={<Clinicaboutpage/>}/>
+    <Route path='/clinicprofile' element={<ClinicEditpage/>}/>
     <Route path='/clinic' element={<Clinicpage/>}/>
     <Route path='/services' element={<Servicespage/>}/>
-    <Route path='/clinicabout' element={<Clinicaboutpage/>}/>
+    <Route path='/editclinic' element={<EditClinicpage/>}/>
+
+
+
+
+
+
+
+
+
 
 </Routes>
   )

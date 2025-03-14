@@ -4,15 +4,21 @@ const Adoption = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-600 to-blue-500 text-white">
       {/* Navbar */}
-      <nav className="bg-gradient-to-r from-purple-700 to-blue-600 text-white shadow-lg py-4 px-6 flex justify-between items-center fixed w-full z-10 top-0">
-        <h1 className="text-3xl font-extrabold tracking-wide">AdoptMe</h1>
-        <ul className="flex space-x-6">
-          <li><a href="#" className="hover:text-gray-300 transition duration-300">Home</a></li>
-          <li><a href="#about" className="hover:text-gray-300 transition duration-300">About</a></li>
-          <li><a href="/profile" className="hover:text-gray-300 transition">Portfolio</a></li>
-          <li><a href="#" className="hover:text-gray-300 transition duration-300">Contact</a></li>
-        </ul>
-      </nav>
+      <nav id="main-nav" className="bg-gradient-to-r from-purple-700 to-blue-600 text-white shadow-lg py-4 px-6 flex justify-between items-center fixed w-full z-10 top-0">
+      <h1 className="text-3xl font-extrabold tracking-wide">AdoptMe</h1>
+    <ul className="flex space-x-6 items-center">
+    <li><a href="#" className="hover:text-gray-300 transition duration-300">Home</a></li>
+    <li><a href="#about" className="hover:text-gray-300 transition duration-300">About</a></li>
+    <li><a href="/profile" className="hover:text-gray-300 transition">Portfolio</a></li>
+    <li><a href="#" className="hover:text-gray-300 transition duration-300">Contact</a></li>
+    <li>
+      <a href="/userprofile" className="hover:text-gray-300 transition duration-300">
+        <img src="public/t1.jpg" alt="User Profile" className="w-10 h-10 rounded-full"/>
+      </a>
+    </li>
+  </ul>
+</nav>
+
       
       {/* Hero Section */}
       <section
@@ -29,11 +35,6 @@ const Adoption = () => {
 </p>
 
 </section>
-
-
-
-
-
 
       {/* About Section */}
       <section id="about" className="py-16 bg-white text-center px-8 rounded-xl shadow-lg mx-6 mt-10 text-gray-800 animate-slide-in">

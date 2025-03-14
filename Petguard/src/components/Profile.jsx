@@ -1,67 +1,41 @@
 import React, { useState } from 'react';
+import { FaHeart } from 'react-icons/fa';
 
 const Profile = () => {
     const [expandedId, setExpandedId] = useState(null);
+    const [favorites, setFavorites] = useState([]);
     
     const toggleReadMore = (id) => {
         setExpandedId(expandedId === id ? null : id);
     };
 
+    const toggleFavorite = (id) => {
+        setFavorites((prev) => 
+            prev.includes(id) ? prev.filter((fav) => fav !== id) : [...prev, id]
+        );
+    };
+
     const pets = [
-        {
-            id: 1,
-            name: "Bella",
-            breed: "Golden Retriever",
-            age: "3 years",
-            vaccinated: true,
-            size: "Large",
-            adoptionFee: "$200",
-            image: "public/bella.jpeg",
-            status: "Available"
-        },
-        {
-            id: 2,
-            name: "Whiskers",
-            breed: "Maine Coon",
-            age: "2 years",
-            vaccinated: false,
-            size: "Medium",
-            adoptionFee: "$150",
-            image: "public/whisker.jpeg",
-            status: "Adopted"
-        },
-        {
-            id: 3,
-            name: "Max",
-            breed: "Graden Dog",
-            age: "4 years",
-            vaccinated: true,
-            size: "Large",
-            adoptionFee: "$180",
-            image: "public/graden.jpeg",
-            status: "Available"
-        },
-        {
-            id: 4,
-            name: "Max",
-            breed: "Labrador",
-            age: "3 years",
-            vaccinated: true,
-            size: "Large",
-            adoptionFee: "$180",
-            image: "public/patti.jpg",
-            status: "Unavailable"
-        },
+        { id: 1, name: "Bella", breed: "Golden Retriever", age: "3 years", vaccinated: true, size: "Large", adoptionFee: "$200", image: "public/bella.jpeg", status: "Available" },
+        { id: 2, name: "Whiskers", breed: "Maine Coon", age: "2 years", vaccinated: false, size: "Medium", adoptionFee: "$150", image: "public/whisker.jpeg", status: "Adopted" },
+        { id: 3, name: "Max", breed: "Graden Dog", age: "4 years", vaccinated: true, size: "Large", adoptionFee: "$180", image: "public/graden.jpeg", status: "Available" },
+        { id: 4, name: "Max", breed: "Labrador", age: "3 years", vaccinated: true, size: "Large", adoptionFee: "$180", image: "public/patti.jpg", status: "Unavailable" },
     ];
 
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-6">
-            {pets.map((pet) => (
-                <div 
-                    key={pet.id} 
-                    className="shadow-lg rounded-2xl overflow-hidden bg-white transition-transform hover:scale-105"
-                >
-                    <div>
+        <div className="flex flex-col min-h-screen">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-6 flex-grow">
+                {pets.map((pet) => (
+                    <div 
+                        key={pet.id} 
+                        className="shadow-lg rounded-2xl overflow-hidden bg-white transition-transform hover:scale-105 relative"
+                    >
+                        <button 
+                            onClick={() => toggleFavorite(pet.id)} 
+                            className={`absolute top-4 right-4 text-2xl ${favorites.includes(pet.id) ? 'text-red-500' : 'text-gray-300'}`}
+                        >
+                            <FaHeart />
+                        </button>
                         <img src={pet.image} alt={pet.name} className="w-full h-64 object-cover rounded-t-2xl" />
                         <div className="p-6">
                             <h2 className="text-2xl font-bold text-gray-800">{pet.name}</h2>
@@ -89,8 +63,14 @@ const Profile = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-            ))}
+                ))}
+            </div>
+            <footer className="bg-gray-800 text-white text-center py-4 mt-6 flex flex-col items-center">
+                <p>&copy; 2025 Pet Adoption. All rights reserved.</p>
+                <button className="mt-2 text-2xl text-red-500">
+                    <FaHeart />
+                </button>
+            </footer>
         </div>
     );
 };
