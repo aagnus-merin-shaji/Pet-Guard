@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Formik, useFormik } from "formik";
 import * as yup from "yup";
 import { useMutation } from "@tanstack/react-query";
+import { motion } from "framer-motion";
 
 const Signup = () => {
   // Validation schema using Yup
@@ -21,35 +22,67 @@ const Signup = () => {
       .required("Password is required"),
   });
 
- const {mutateAsync }=useMutation({
-  mutationFn:"",
-  mutationKey:["Usersignup"]})
-
+  const { mutateAsync } = useMutation({
+    mutationFn: "",
+    mutationKey: ["Usersignup"],
+  });
 
   // Initializing useFormik hook
-  const { values, errors, touched, getFieldProps, handleSubmit } =
-    useFormik({
-      initialValues: {
-        username: "",
-        email: "",
-        password: "",
-      },
-      validationSchema,
-      onSubmit:async (values) => {
-        mutateAsync(values).then((data)=>{
-          console.log(data);
-        })
+  const { values, errors, touched, getFieldProps, handleSubmit } = useFormik({
+    initialValues: {
+      username: "",
+      email: "",
+      password: "",
+    },
+    validationSchema,
+    onSubmit: async (values) => {
+      mutateAsync(values).then((data) => {
+        console.log(data);
+      });
+    },
+  });
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
       },
-    });
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-2xl shadow-lg w-96">
+    <motion.div
+      className="flex items-center justify-center min-h-screen bg-cover bg-center"
+      style={{ backgroundImage: "url('/public/pexels-pixabay-45201.jpg')" }}
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <motion.div
+        className="bg-white/70 p-8 rounded-2xl shadow-lg w-96" // Changed to half transparent
+        variants={itemVariants}
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.98 }}
+        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      >
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
           Sign Up
         </h2>
-        
+
         {/* Form with useFormik */}
         <form onSubmit={handleSubmit}>
           {/* Username Field */}
@@ -121,8 +154,8 @@ const Signup = () => {
             </button>
           </Link>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

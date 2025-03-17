@@ -1,11 +1,14 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import Pet from '../components/Pet'
+import Navbar2 from '../components/Navbar2'
+import Footer from '../components/Footer'
+import Adoptionform from '../components/Adoptionform'
 
 function Petadoptionpage() {
   return (
     <>
-    <Pet/>
+    <Navbar2/>
+    <Adoptionform/>
+    <Footer/>
     </>
   )
 }

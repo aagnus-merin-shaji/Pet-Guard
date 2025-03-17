@@ -17,25 +17,27 @@ const Userprofile = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto bg-white shadow-lg rounded-2xl p-8 text-center border border-gray-300">
-      <div className="relative w-32 h-32 mx-auto">
-        <img
-          src={user.profilePicture}
-          alt="Profile"
-          className="w-32 h-32 mx-auto rounded-full border-4 border-blue-500 object-cover shadow-md"
-          onError={(e) => (e.target.src = "/public/t1.jpg")}
-        />
-      </div>
-      <h2 className="text-2xl font-bold mt-4 text-gray-800">{user.username}</h2>
-      <p className="text-gray-500">{user.bio}</p>
-      <div className="mt-4 space-y-2 text-left px-6">
-        <p className="text-gray-600"><strong>Email:</strong> {user.email}</p>
-        <p className="text-gray-600"><strong>Phone:</strong> {user.phoneNumber}</p>
-        <p className="text-gray-600"><strong>Location:</strong> {user.location}</p>
-        <p className="text-gray-600"><strong>Interests:</strong> {user.interest}</p>
-        <p className="text-gray-600"><strong>Pet Experience:</strong> {user.petExperience}</p>
-        <p className="text-gray-600"><strong>Preferred Pet Type:</strong> {user.preferredPetType}</p>
-        <p className="text-gray-600"><strong>Has Other Pets:</strong> {user.hasOtherPets}</p>
+    <div className="max-w-lg mx-auto bg-white shadow-lg rounded-2xl p-8 text-center border border-gray-300 h-[600px] flex flex-col justify-between">
+      <div>
+        <div className="relative w-32 h-32 mx-auto">
+          <img
+            src={user.profilePicture}
+            alt="Profile"
+            className="w-32 h-32 mx-auto rounded-full border-4 border-blue-500 object-cover shadow-md"
+            onError={(e) => (e.target.src = "/public/t1.jpg")}
+          />
+        </div>
+        <h2 className="text-2xl font-bold mt-4 text-gray-800">{user.username}</h2>
+        <p className="text-gray-500">{user.bio}</p>
+        <div className="mt-4 space-y-2 text-left px-6">
+          <p className="text-gray-600"><strong>Email:</strong> {user.email}</p>
+          <p className="text-gray-600"><strong>Phone:</strong> {user.phoneNumber}</p>
+          <p className="text-gray-600"><strong>Location:</strong> {user.location}</p>
+          <p className="text-gray-600"><strong>Interests:</strong> {user.interest}</p>
+          <p className="text-gray-600"><strong>Pet Experience:</strong> {user.petExperience}</p>
+          <p className="text-gray-600"><strong>Preferred Pet Type:</strong> {user.preferredPetType}</p>
+          <p className="text-gray-600"><strong>Has Other Pets:</strong> {user.hasOtherPets}</p>
+        </div>
       </div>
       <button
         onClick={() => navigate("/editprofile")}

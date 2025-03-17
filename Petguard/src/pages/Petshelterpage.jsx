@@ -5,7 +5,6 @@ import PetShelter from '../components/Petshelter'
 function Petshelterpage() {
   return (
     <>
-    <Navbar/>
     <PetShelter/>
     </>
   )

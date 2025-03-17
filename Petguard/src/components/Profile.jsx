@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { FaHeart } from 'react-icons/fa';
 
+
+
 const Profile = () => {
     const [expandedId, setExpandedId] = useState(null);
     const [favorites, setFavorites] = useState([]);
@@ -23,7 +25,7 @@ const Profile = () => {
     ];
 
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-s-screen">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-6 flex-grow">
                 {pets.map((pet) => (
                     <div 
