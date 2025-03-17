@@ -22,6 +22,8 @@ import ClinicEditpage from '../pages/ClinicEditpage'
 import EditClinicpage from '../pages/EditClinicpage'
 import HomePage from '../pages/HomePage'
 import Paymentpage from '../pages/Paymentpage'
+import Animalpages from '../pages/Animalpages'
+import Mereportspage from '../pages/Mereportspage'
 
 function Admin() {
   return (
@@ -51,6 +53,10 @@ function Admin() {
     <Route path='/shelterprofile' element={<ShelterPage/>}/>
     <Route path='/editshelter' element={<Editshelterpage/>}/>
     <Route path='/contact' element={<Contactpage/>}/>
+    <Route path='/animal' element={<Animalpages/>}/>
+    <Route path='/reports' element={<Mereportspage/>}/>
+
+
 
 
 

@@ -1,11 +1,14 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
 import PetShelter from '../components/Petshelter'
+import Home from '../components/Home'
+import Footer from '../components/Footer'
 
 function Petshelterpage() {
   return (
     <>
+    <Home/>
     <PetShelter/>
+    <Footer/>
     </>
   )
 }

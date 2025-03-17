@@ -9,10 +9,20 @@ const Navbar = () => {
     <>
       {/* Navbar */}
       <header className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-4 shadow-lg">
-</header>
+        {/* You can add navbar content here if needed */}
+      </header>
 
       {/* Hero Section */}
-      <section className="w-full bg-gradient-to-br from-blue-400 to-purple-500 text-white text-center py-24 px-6 relative">
+      <section
+        className="w-full text-white text-center py-24 px-6 relative"
+        style={{
+          backgroundImage: `url('public/Wallpaper-House.com_272730.jpg')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundColor: "rgba(0, 0, 0, 0.5)", // Dark overlay for better text visibility
+          backgroundBlendMode: "multiply", // Blend overlay with image
+        }}
+      >
         <div className="max-w-4xl mx-auto">
           <h2 className="text-6xl font-extrabold mb-6">Welcome to PAW GUARDIAN</h2>
           <p className="text-xl max-w-2xl mx-auto">
@@ -20,14 +30,26 @@ const Navbar = () => {
           </p>
         </div>
         <div className="mt-8 flex justify-center gap-6">
-          <img src="public/dog.jpg" alt="Happy pet" className="rounded-xl shadow-lg w-1/4 transform hover:scale-110 transition duration-300 border-4 border-white" />
-          <img src="public/cats.jpg" alt="Pets playing" className="rounded-xl shadow-lg w-1/4 transform hover:scale-110 transition duration-300 border-4 border-white" />
-          <img src="public/dogcat.jpg" alt="Owner with pet" className="rounded-xl shadow-lg w-1/4 transform hover:scale-110 transition duration-300 border-4 border-white" />
+          <img
+            src="public/dog.jpg"
+            alt="Happy pet"
+            className="rounded-xl shadow-lg w-1/4 transform hover:scale-110 transition duration-300 border-4 border-white"
+          />
+          <img
+            src="public/cats.jpg"
+            alt="Pets playing"
+            className="rounded-xl shadow-lg w-1/4 transform hover:scale-110 transition duration-300 border-4 border-white"
+          />
+          <img
+            src="public/dogcat.jpg"
+            alt="Owner with pet"
+            className="rounded-xl shadow-lg w-1/4 transform hover:scale-110 transition duration-300 border-4 border-white"
+          />
         </div>
       </section>
 
       {/* About Section */}
-      <section className="bg-gray-100 py-16" id='about'>
+      <section className="bg-gray-100 py-16" id="about">
         <div className="container mx-auto px-6 text-center">
           <h3 className="text-4xl font-bold mb-6">About Us</h3>
           <p className="text-gray-600 max-w-3xl mx-auto text-lg">
@@ -46,8 +68,6 @@ const Navbar = () => {
         </div>
       </section>
 
-      {/* Footer */}
-     
     </>
   );
 };
