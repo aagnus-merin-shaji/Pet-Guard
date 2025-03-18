@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useReactToPrint } from 'react-to-print'; // Import react-to-print
 
-const PetMedicalDetailsForm = () => {
+const Mreoport = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const { pet } = location.state || {}; // Get pet data from navigation state
@@ -106,4 +106,4 @@ const styles = {
     },
 };
 
-export default PetMedicalDetailsForm;
+export default Mreoport;

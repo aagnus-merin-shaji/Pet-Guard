@@ -169,11 +169,11 @@ function Adoptionform() {
             </div>
 
             <a
-              href="/payment"
-              className="w-full bg-indigo-600 text-white p-4 rounded-xl font-semibold text-lg hover:bg-indigo-700 transition duration-300 text-center block"
-            >
-              Submit Application
-            </a>
+  href="/request" // Changed href to your application request endpoint
+  className="w-full bg-indigo-600 text-white p-4 rounded-xl font-semibold text-lg hover:bg-indigo-700 transition duration-300 text-center block"
+>
+  Submit Application Request
+</a>
           </form>
         </div>
       </div>

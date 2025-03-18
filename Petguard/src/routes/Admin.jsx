@@ -24,6 +24,7 @@ import HomePage from '../pages/HomePage'
 import Paymentpage from '../pages/Paymentpage'
 import Animalpages from '../pages/Animalpages'
 import Mereportspage from '../pages/Mereportspage'
+import Requestpage from '../pages/Requestpage'
 
 function Admin() {
   return (
@@ -55,6 +56,8 @@ function Admin() {
     <Route path='/contact' element={<Contactpage/>}/>
     <Route path='/animal' element={<Animalpages/>}/>
     <Route path='/reports' element={<Mereportspage/>}/>
+    <Route path='/request' element={<Requestpage/>}/>
+
 
 
 

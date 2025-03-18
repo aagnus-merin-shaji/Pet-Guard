@@ -8,6 +8,7 @@ function Animalpages() {
    <>
    <Home/>
    <Animal/>
+   <Footer/>
    </>
   )
 }

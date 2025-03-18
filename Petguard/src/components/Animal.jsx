@@ -65,12 +65,6 @@ const Animal = () => {
           </div>
         ))}
       </div>
-      <footer className="bg-gray-800 text-white text-center py-4 mt-6 flex flex-col items-center">
-        <p>&copy; 2025 Pet Adoption. All rights reserved.</p>
-        <button className="mt-2 text-2xl text-red-500">
-          <FaHeart />
-        </button>
-      </footer>
     </div>
   );
 };

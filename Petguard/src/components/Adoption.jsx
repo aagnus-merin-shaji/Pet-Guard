@@ -58,8 +58,6 @@ const Adoption = () => {
           ))}
         </div>
       </section>
-
-      {/* Footer */}
     </div>
   );
 };
